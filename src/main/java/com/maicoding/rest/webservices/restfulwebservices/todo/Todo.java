@@ -1,4 +1,4 @@
-package com.in28minutes.rest.webservices.restfulwebservices.todo;
+package com.maicoding.rest.webservices.restfulwebservices.todo;
 
 import java.time.LocalDate;
 
