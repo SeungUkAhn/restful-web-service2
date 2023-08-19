@@ -37,9 +37,9 @@ import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
 
-@Configuration
-@EnableWebSecurity
-@EnableMethodSecurity
+//@Configuration
+//@EnableWebSecurity
+//@EnableMethodSecurity
 public class JwtSecurityConfig {
 
     @Bean
@@ -51,7 +51,7 @@ public class JwtSecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .antMatchers("/authenticate").permitAll()
                         .requestMatchers(PathRequest.toH2Console()).permitAll() // h2-console is a servlet and NOT recommended for a production
-                        .antMatchers(HttpMethod.OPTIONS, "/**")
+                        .antMatchers(HttpMethod.OPTIONS,"/**")
                         .permitAll()
                         .anyRequest()
                         .authenticated())
@@ -62,10 +62,8 @@ public class JwtSecurityConfig {
                         OAuth2ResourceServerConfigurer::jwt)
                 .httpBasic(
                         Customizer.withDefaults())
-                .headers(header -> {
-                    header.
-                            frameOptions().sameOrigin();
-                })
+                .headers(header -> {header.
+                        frameOptions().sameOrigin();})
                 .build();
     }
 
