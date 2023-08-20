@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
+@RestController
 public class JwtAuthenticationController {
 
     private final JwtTokenService tokenService;
@@ -28,7 +28,7 @@ public class JwtAuthenticationController {
                 new UsernamePasswordAuthenticationToken(
                         jwtTokenRequest.username(),
                         jwtTokenRequest.password());
-
+        System.out.println("token: " + jwtTokenRequest.username());
         var authentication =
                 authenticationManager.authenticate(authenticationToken);
 
