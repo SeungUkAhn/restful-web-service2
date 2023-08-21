@@ -46,7 +46,7 @@ public class JwtSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity, HandlerMappingIntrospector introspector) throws Exception {
-
+    System.out.println(PathRequest.toH2Console().toString());
         // h2-console is a servlet
         // https://github.com/spring-projects/spring-security/issues/12310
         return httpSecurity
