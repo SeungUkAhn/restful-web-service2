@@ -12,4 +12,6 @@ Udemy 스프링부트 강의 수강 중 토이 프로젝트로 제작한 Todo �
 - Spring Security(JWT 인증, CSRF비활성화, stateless session)
 - h2(인메모리 DB)
 - CORS 필터
-   
+
+# Note
+- Todo 앱 프론트: https://github.com/SeungUkAhn/todo-app
