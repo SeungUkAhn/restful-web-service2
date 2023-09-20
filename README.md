@@ -14,4 +14,4 @@ Udemy 스프링부트 강의 수강 중 사이드 프로젝트로 제작한 Todo
 - CORS 필터
 
 # Note
-- Todo 앱 프론트: https://github.com/SeungUkAhn/todo-app
+- Todo 앱 프론트: https://github.com/SeungUkAhn/todo-app-frontend
